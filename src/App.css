@@ -1,42 +1,161 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* 🔷 Overall body styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🔷 Page content container */
+.content {
+  flex: 1;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* 🔷 Footer styling */
+footer {
+  background-color: #004080;
+  color: white;
   text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* 🔷 Buttons (used in login/signup forms) */
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+button:hover {
+  background-color: #0056b3;
 }
 
-.card {
-  padding: 2em;
+/* 🔷 Auth form container */
+.auth-container {
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.read-the-docs {
-  color: #888;
+.auth-container h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
 }
+
+.auth-container label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* 🔷 Links inside pages (optional) */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =============================== */
+/* 🔷 NAVBAR + SIDEBAR CSS BELOW ⬇ */
+/* =============================== */
+
+/* Top navbar container */
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(0, 100%, 25%);
+  color: white;
+  padding: 15px 20px;
+  position: relative;
+  z-index: 200; /* make sure navbar is on top */
+}
+
+/* 🔷 Hamburger icon - all devices */
+.hamburger {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+  width: 30px;
+  height: auto;
+  z-index: 201;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: black;
+  border-radius: 3px;
+  display: block;
+}
+
+/* 🔷 Sidebar default hidden */
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: -250px;
+  width: 200px;
+  height: 100%;
+  background-color: #004080;
+  color: white;
+  padding-top: 20px;
+  transition: left 0.3s ease;
+  z-index: 100;
+}
+
+/* 🔷 Sidebar open class */
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 10px 20px;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar ul li a:hover {
+  background-color: #0059b3;
+  border-radius: 5px;
+}
+
+/

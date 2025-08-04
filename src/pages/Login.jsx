@@ -9,12 +9,10 @@ function Login() {
   });
 
   const [role, setRole] = useState("student");
-
   // Input handle karne ka function
   const handleChange = (e) => {
     setLoginData({ ...loginData, [e.target.name]: e.target.value });
   };
-
   // Login submit hone par yahan role aur data check hoga
   const handleLogin = (e) => {
     e.preventDefault();
@@ -24,7 +22,6 @@ function Login() {
 } else {
   alert(`Student logged in: ${loginData.username}`);
 }
-
   };
 
   return (

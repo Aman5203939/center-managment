@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import './Navbar.css';// Navbar-specific CSS file import ho rahi hai
 
 // Functional component Navbar banaya ja raha hai
 const Navbar = () => {

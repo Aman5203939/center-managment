@@ -7,12 +7,10 @@ function Signup() {
     password: "",
     role: "student", // default role student hoga
   });
-
   // Input change handle karne ka function
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
   // Form submit hone par data console me print hoga
   const handleSubmit = (e) => {
     e.preventDefault();

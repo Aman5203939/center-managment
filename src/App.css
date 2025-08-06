@@ -3,8 +3,8 @@ body {
   margin: 0;
   padding: 0;
   /*font-family: '*/
-  background-color: black;
-  color: #333;
+  background-color: wheat;
+  color: black;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -20,6 +20,7 @@ body {
   background-color: hsl(0, 100%, 25%);
   color: white;
   padding: 15px 20px;
+  border-radius: 20px;
   position: relative;
   z-index: 200; /* make sure navbar is on top */
 }
@@ -86,4 +87,14 @@ body {
   border-radius: 5px;
 }
 
-/
+/*/signup form */
+.signup-container {
+  display: flex;
+  border-radius: 20px;
+   border: 2px solid #ccc ;
+   box-sizing: border-box;
+  padding: 20px;
+  margin: 20px auto;
+  width: 300px;
+  background-color: #0059b3;
+}

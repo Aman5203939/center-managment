@@ -25,8 +25,7 @@ function Login() {
   };
 
   return (
-    <div>
-      <h2>Login Page</h2>
+    <div className="login-container">
       <form onSubmit={handleLogin}>
         <label>Username:</label><br />
         <input type="text" name="username" value={loginData.username} onChange={handleChange} /><br />

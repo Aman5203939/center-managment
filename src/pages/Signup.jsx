@@ -19,8 +19,7 @@ function Signup() {
   };
 
   return (
-    <div>
-      <h2>Signup Page</h2>
+    <div className="signup-container">
       <form onSubmit={handleSubmit}>
         <label>Username:</label><br />
         <input type="text" name="username" value={formData.username} onChange={handleChange} /><br />

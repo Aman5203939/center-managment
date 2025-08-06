@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   /*font-family: '*/
-  background-color: wheat;
+  background-color: hsl(33, 77%, 29%);
   color: black;
   height: 100vh;
   display: flex;
@@ -87,14 +87,16 @@ body {
   border-radius: 5px;
 }
 
-/*/signup form */
 .signup-container {
   display: flex;
-  border-radius: 20px;
-   border: 2px solid #ccc ;
-   box-sizing: border-box;
+  background-color: hsl(0, 100%, 25%);
+  justify-content: center;
+  align-items: center;
+  height:50vh;
+  color: hsl(0, 0%, 0%);
+  font-size: 20px;
   padding: 20px;
-  margin: 20px auto;
-  width: 300px;
-  background-color: #0059b3;
+  margin-top: 10px;
+  border-radius: 10px;
+  
 }

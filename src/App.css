@@ -82,13 +82,13 @@ body {
 }
 
 .sidebar ul li a:hover {
-  background-color: hsl(204, 100%, 35%);
+  background-color: hsl(0, 0%, 0%);
   border-radius: 5px;
 }
 
 .signup {
   display: flex;
-  background-color: burlywood;
+  background-color: hsl(41, 31%, 45%);
   justify-content: center;
   align-items: center;
   height:55vh;
@@ -97,6 +97,7 @@ body {
   padding: 30px;
   margin-top: 10px;
   border-radius: 10px;
+  b
   
 
   
@@ -104,7 +105,7 @@ body {
 
 .login {
   display: flex;
-  background-color: burlywood;
+  background-color: hsl(41, 31%, 45%);
   justify-content: center;
   align-items: center;
   height:50vh;

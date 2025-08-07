@@ -5,14 +5,13 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Custom components import ho rahe hain
-import Navbar from './components/Navbar'; // Top navigation bar
-import Footer from './components/Footer'; // Bottom footer
-
+import Navbar from './components/Navbar'; 
+import Footer from './components/Footer'; 
 // Pages (routes) import ho rahi hain
-import Home from './pages/Home';         // Home page
-import Course from './pages/Course';     // Course page
-import Section from './pages/Section';   // Section page
-import About from './pages/About';       // About Us page
+import Home from './pages/Home';
+import Course from './pages/Course';   
+import Section from './pages/Section';   
+import About from './pages/About';      
 import Signup from './pages/Signup';     
 import Login from './pages/Login';
 // App-specific CSS file import ho rahi hai

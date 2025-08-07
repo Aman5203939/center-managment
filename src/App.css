@@ -17,8 +17,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: hsl(0, 100%, 25%);
-  color: white;
+  background-color: hsl(41, 31%, 45%);
+  color: rgb(14, 10, 10);
   padding: 15px 20px;
   border-radius: 20px;
   position: relative;
@@ -42,7 +42,6 @@ body {
   width: 25px;
   height: 3px;
   background: black;
-  border-radius: 3px;
   display: block;
  
 }
@@ -57,8 +56,9 @@ body {
   background-color: burlywood;
   color: #eb0a0a;
   padding-top: 20px;
-  transition: left 0.3s ease;
-  z-index: 100;
+   transition: left 0.3s ease;
+     z-index: 100;
+
 }
 
 /* Sidebar open class */
@@ -78,38 +78,41 @@ body {
 
 .sidebar ul li a {
   color: white;
-  text-decoration: none;
   display: block;
 }
 
 .sidebar ul li a:hover {
-  background-color: #0059b3;
+  background-color: hsl(204, 100%, 35%);
   border-radius: 5px;
 }
 
-.signup-container {
+.signup {
   display: flex;
-  background-color: hsl(0, 100%, 25%);
+  background-color: burlywood;
   justify-content: center;
   align-items: center;
-  height:50vh;
-  color: hsl(0, 0%, 0%);
+  height:55vh;
+  color: hsl(0, 14%, 8%);
   font-size: 20px;
-  padding: 20px;
+  padding: 30px;
   margin-top: 10px;
   border-radius: 10px;
   
+
+  
 }
 
-.login-container {
+.login {
   display: flex;
-  background-color: hsl(0, 100%, 25%);
+  background-color: burlywood;
   justify-content: center;
   align-items: center;
   height:50vh;
-  color: hsl(0, 0%, 0%);
+  color: hsl(0, 13%, 9%);
   font-size: 20px;
   padding: 20px;
   margin-top: 10px;
   border-radius: 10px;
+;
+ 
 }

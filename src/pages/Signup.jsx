@@ -19,8 +19,17 @@ function Signup() {
   };
 
   return (
-    <div className="signup-container">
+    <div className="signup">
+        <div className="box"> 
+     
+      <h2>Signup</h2>
+    
       <form onSubmit={handleSubmit}>
+
+     <label>Email:</label><br />
+        <input type="email" id="email" name="email" placeholder="Enter your email"></input>{handleChange}<br />
+
+
         <label>Username:</label><br />
         <input type="text" name="username" value={formData.username} onChange={handleChange} /><br />
 
@@ -35,6 +44,7 @@ function Signup() {
 
         <button type="submit">Signup</button>
       </form>
+    </div>
     </div>
   );
 }

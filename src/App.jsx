@@ -21,12 +21,12 @@ function App() {
     // Router se pura app route-enabled ban jata hai
     <Router>
       {/* Navbar sabhi pages ke upar rahega */}
-      <Navbar />
+      {/* <Navbar /> */}
 
       <div className="content">
         <Routes>
           {/* Yahan har route ke path aur uska page component diya gaya hai */}
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Login/>}  />
           <Route path="/course" element={<Course />} />
           <Route path="/section" element={<Section />} />
           <Route path="/about" element={<About />} />

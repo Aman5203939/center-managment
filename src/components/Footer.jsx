@@ -5,7 +5,6 @@ const Footer = () => {
     return(
         <footer>
             <p>&copy; My college All right reserved.</p>
-            <p>Emai: ecm1232gmail.com</p>
         </footer>
     )
 }

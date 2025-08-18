@@ -1,48 +1,84 @@
 import React, { useState } from "react";
+// Page navigation ke liye
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import "../App.css";
 
 function Login() {
-  // Login form ke liye state banaya
+  const navigate = useNavigate();
+
+  // Login form data store
   const [loginData, setLoginData] = useState({
     username: "",
     password: "",
   });
 
-  const [role, setRole] = useState("student");
-  // Input handle karne ka function
+  // Input change handle
   const handleChange = (e) => {
     setLoginData({ ...loginData, [e.target.name]: e.target.value });
   };
-  // Login submit hone par yahan role aur data check hoga
+
+  // Login submit handle
   const handleLogin = (e) => {
     e.preventDefault();
 
-   if (role === "admin") {
-  alert(`Admin logged in: ${loginData.username}`);
-} else {
-  alert(`Student logged in: ${loginData.username}`);
-}
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    // Check valid user
+    const validUser = users.find(
+      (user) =>
+        user.username === loginData.username &&
+        user.password === loginData.password
+    );
+
+    if (validUser) {
+     localStorage.setItem("user", JSON.stringify({ username: loginData.username }));//yaha line logaout vale user ko localStorage me store kar rahe hain
+
+      // Role ke hisaab se navigate
+      if (validUser.role === "admin") {
+        navigate("/admin");
+      } else {
+        navigate("/student");
+      }
+    } else {
+      (" ");
+    } 
   };
 
   return (
     <div className="login">
       <div className="box">
-      <h2>Login</h2>
-      <form onSubmit={handleLogin}>
-        <label>Username:</label><br />
-        <input type="text" name="username" value={loginData.username} onChange={handleChange} /><br />
+        <h2>Login</h2>
+        <form onSubmit={handleLogin}>
+          {/* Username input */}
+   <label>Username:</label><br />
+   <input
+   type="text"
+   name="username"
+  placeholder="Enter username"
+    value={loginData.username}
+    onChange={handleChange}
+     required
+  /><br />
 
-        <label>Password:</label><br />
-        <input type="password" name="password" value={loginData.password} onChange={handleChange} /><br />
+   {/* Password input */}
+   <label>Password:</label><br />
+     <input
+     type="password"
+       name="password"
+    placeholder="Enter password"
+     value={loginData.password}
+     onChange={handleChange}
+z    /><br />
 
-        <label>Role:</label><br />
-        <select value={role} onChange={(e) => setRole(e.target.value)}>
-          <option value="student">Student</option>
-          <option value="admin">Admin</option>
-        </select><br /><br />
-
-        <button type="submit">Login</button>
-      </form>
-    </div>
+    <button type="submit">Login</button>
+    {/*yaha ham login ke niche signup ka link de rahe he */} 
+    <p>
+        Not registered yet?{" "}
+        <Link to="/signup">Signup here</Link>
+      </p>  
+           </form>
+      </div>
     </div>
   );
 }

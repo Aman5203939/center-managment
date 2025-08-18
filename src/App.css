@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   /*font-family: '*/
-  background-color: hsl(33, 77%, 29%);
+  background-color:white;
   color: black;
   height: 100vh;
   display: flex;
@@ -17,12 +17,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: hsl(41, 31%, 45%);
+  background-color:  hsl(33, 59%, 48%);;
   color: rgb(14, 10, 10);
   padding: 15px 20px;
   border-radius: 20px;
-  position: relative;
-  z-index: 200; /* make sure navbar is on top */
+  z-index: 50; 
+  
 }
 
 /* Hamburger icon - all devices */
@@ -35,6 +35,7 @@ body {
   width: 30px;
   height: auto;
   z-index: 201;
+  
 
 }
 
@@ -49,13 +50,13 @@ body {
 /*  Sidebar default hidden */
 .sidebar {
   position: fixed;
-  top: 60px;
+  top: 0px;
   left: -250px;
   width: 200px;
   height: 100%;
-  background-color: burlywood;
+  background-color: hsl(33, 59%, 48%);
   color: #eb0a0a;
-  padding-top: 20px;
+  padding-top: 50px;
    transition: left 0.3s ease;
      z-index: 100;
 
@@ -73,7 +74,7 @@ body {
 }
 
 .sidebar ul li {
-  padding: 10px 20px;
+  padding: 15px 20px;
 }
 
 .sidebar ul li a {
@@ -86,9 +87,9 @@ body {
   border-radius: 5px;
 }
 
-.signup {
+/*.signup .box{
   display: flex;
-  background-color: hsl(41, 31%, 45%);
+  background-color:#566083
   justify-content: center;
   align-items: center;
   height:55vh;
@@ -97,23 +98,36 @@ body {
   padding: 30px;
   margin-top: 10px;
   border-radius: 10px;
-  b
-  
-
-  
+  text-align: center;  
 }
-
-.login {
-  display: flex;
-  background-color: hsl(41, 31%, 45%);
-  justify-content: center;
-  align-items: center;
-  height:50vh;
-  color: hsl(0, 13%, 9%);
-  font-size: 20px;
+*/.signup .box {
+  background-color: rgb(194, 176, 154);
+  height:55vh;
   padding: 20px;
   margin-top: 10px;
   border-radius: 10px;
-;
- 
+  text-align: center;
+
 }
+
+
+.login .box {
+  background-color: rgb(194, 176, 154);
+  height: 45vh;
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 10px;
+  text-align: center;
+
+}
+.login input {
+margin-bottom: 15px;
+
+}
+
+.logout-span {
+  display: block;
+  cursor: pointer;  
+  color: white;
+}
+

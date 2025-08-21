@@ -3,11 +3,13 @@ import Navbar from '../components/Navbar';
 
 const Home = () => {
   return (
-    
-    <div>
-      <Navbar />
+    <>
+    <Navbar />    <div>
+      
       <h1>Welcome to the Home Page</h1>
     </div>
+    </>
+
   );
 };
 

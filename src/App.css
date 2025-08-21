@@ -12,20 +12,32 @@ body {
 
 /* NAVBAR + SIDEBAR CSS  */
 
-/* Top navbar container */
+/* top navbar container */
 .navbar-header {
   display: flex;
-  justify-content: space-between;
+  position: fixed;
   align-items: center;
   background-color:  hsl(33, 59%, 48%);;
   color: rgb(14, 10, 10);
   padding: 15px 20px;
-  border-radius: 20px;
+  border-radius: 0px;
   z-index: 50; 
-  
+   width: 100%;
+   width: 100vw;
+   left: 0;
+   top: 0;
+   margin:0;
+}
+/* navbar title center aligned */
+.navbar-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  font-size: 20px;
 }
 
-/* Hamburger icon - all devices */
+/* hamburger icon all devices */
 .hamburger {
   cursor: pointer;
   display: flex;
@@ -58,7 +70,7 @@ body {
   color: #eb0a0a;
   padding-top: 50px;
    transition: left 0.3s ease;
-     z-index: 100;
+  z-index: 100;
 
 }
 
@@ -104,7 +116,7 @@ body {
   background-color: rgb(194, 176, 154);
   height:55vh;
   padding: 20px;
-  margin-top: 10px;
+  margin-top: 60px;
   border-radius: 10px;
   text-align: center;
 
@@ -115,7 +127,7 @@ body {
   background-color: rgb(194, 176, 154);
   height: 45vh;
   padding: 20px;
-  margin-top: 10px;
+  margin-top: 60px;
   border-radius: 10px;
   text-align: center;
 
@@ -130,4 +142,19 @@ margin-bottom: 15px;
   cursor: pointer;  
   color: white;
 }
+.content, .page-content {
+  padding-top: 70px;  
+}
 
+
+footer {
+  background-color: #222;   
+  color: white;             
+  text-align: center;
+  padding: 12px 0;
+
+  position: fixed;          
+  bottom: 0;                
+  left: 0;
+  width: 100%;
+}

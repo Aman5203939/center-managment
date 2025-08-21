@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   /*font-family: '*/
-  background-color:white;
+  background-color: white;
   color: black;
   height: 100vh;
   display: flex;
@@ -13,16 +13,17 @@ body {
 /* NAVBAR + SIDEBAR CSS  */
 
 /* Top navbar container */
-.navbar-header {
+.Navbar-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color:  hsl(33, 59%, 48%);;
+  background-color: hsl(33, 59%, 48%);
+  ;
   color: rgb(14, 10, 10);
   padding: 15px 20px;
   border-radius: 20px;
-  z-index: 50; 
-  
+  z-index: 50;
+
 }
 
 /* Hamburger icon - all devices */
@@ -35,7 +36,7 @@ body {
   width: 30px;
   height: auto;
   z-index: 201;
-  
+
 
 }
 
@@ -44,7 +45,7 @@ body {
   height: 3px;
   background: black;
   display: block;
- 
+
 }
 
 /*  Sidebar default hidden */
@@ -57,8 +58,8 @@ body {
   background-color: hsl(33, 59%, 48%);
   color: #eb0a0a;
   padding-top: 50px;
-   transition: left 0.3s ease;
-     z-index: 100;
+  transition: left 0.3s ease;
+  z-index: 100;
 
 }
 
@@ -100,11 +101,12 @@ body {
   border-radius: 10px;
   text-align: center;  
 }
-*/.signup .box {
+*/
+.signup .box {
   background-color: rgb(194, 176, 154);
-  height:55vh;
+  height: 55vh;
   padding: 20px;
-  margin-top: 10px;
+  margin-top: 60px;
   border-radius: 10px;
   text-align: center;
 
@@ -115,19 +117,19 @@ body {
   background-color: rgb(194, 176, 154);
   height: 45vh;
   padding: 20px;
-  margin-top: 10px;
+  margin-top: 60px;
   border-radius: 10px;
   text-align: center;
 
 }
+
 .login input {
-margin-bottom: 15px;
+  margin-bottom: 10px;
 
 }
 
 .logout-span {
   display: block;
-  cursor: pointer;  
+  cursor: pointer;
   color: white;
 }
-

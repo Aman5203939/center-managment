@@ -20,21 +20,21 @@ const Navbar = () => {
 
   // Logout ke liye function – user data remove hoga aur login page par bhej dega
   const handleLogout = () => {
-    localStorage.removeItem("user"); 
-    navigate("/login"); 
+    localStorage.removeItem("user");
+    navigate("/login");
   };
 
   return (
     <>
       {/*  Top header jisme heading aur hamburger menu icon hai */}
-      <header className="navbar-header">
+      <header className="Navbar-header">
         <h2>Exam Center Management</h2>
 
         {/* Hamburger icon (3 lines), jisse sidebar toggle hoga */}
         <div className="hamburger" onClick={toggleSidebar}>
           <span></span> {/* Line 1 */}
-          <span></span> 
-          <span></span> 
+          <span></span>
+          <span></span>
         </div>
       </header>
 
@@ -48,13 +48,13 @@ const Navbar = () => {
           <li><Link to="/about" onClick={toggleSidebar}>About</Link></li>
 
           {/* Agar user login hai to Logout button dikhana hai, warna Login/Signup */}
-       {user ? (
-  <li>
-    <span className="logout-span" onClick={handleLogout}>
-      Logout
-    </span>
-  </li>
-) : (
+          {user ? (
+            <li>
+              <span className="logout-span" onClick={handleLogout}>
+                Logout
+              </span>
+            </li>
+          ) : (
             <li><Link to="/login" onClick={toggleSidebar}>Login / Signup</Link></li>
           )}
         </ul>

@@ -1,6 +1,6 @@
-// React aur useState import
+// react aur useState import
 import React, { useState } from "react";
-// Page navigation ke liye
+// page navigation ke liye
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "../App.css";
@@ -9,7 +9,7 @@ import "../App.css";
 function Signup() {
   const navigate = useNavigate();
 
-  // Form data store karne ke liye state
+  // form data store karne ke liye state
   const [formData, setFormData] = useState({
     email: "",
     username: "",
@@ -17,18 +17,18 @@ function Signup() {
     role: "student",
   });
 
-  // Input change handle
+  // input change handle
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Signup submit handle
+  // signup submit handle
   const handleSignup = (e) => {
     e.preventDefault();
 
     let users = JSON.parse(localStorage.getItem("users")) || [];
 
-    // Check if user already exists
+    // check if user already exists
     const userExists = users.some(
       (user) =>
         user.email === formData.email || user.username === formData.username

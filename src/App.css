@@ -13,9 +13,9 @@ body {
 /* NAVBAR + SIDEBAR CSS  */
 
 /* Top navbar container */
-.Navbar-header {
+.navbar-header {
   display: flex;
-  justify-content: space-between;
+  position: fixed;
   align-items: center;
   background-color: hsl(33, 59%, 48%);
   ;
@@ -26,7 +26,7 @@ body {
 
 }
 
-/* Hamburger icon - all devices */
+/* hamburger icon all devices */
 .hamburger {
   cursor: pointer;
   display: flex;

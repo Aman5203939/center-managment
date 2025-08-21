@@ -1,7 +1,7 @@
-// React core library import kar rahe hain
+// react core library import kar rahe hain
 import React from 'react';
 
-// React Router se components import ho rahe hain navigation ke liye
+// react router se components import ho rahe hain navigation ke liye
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Custom components import ho rahe hain
@@ -14,14 +14,14 @@ import Section from './pages/Section';
 import About from './pages/About';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
-// App-specific CSS file import ho rahi hai
+// appspecific CSS file import ho rahi hai
 import './App.css';
 function App() {
   return (
-    // Router se pura app route-enabled ban jata hai
+    // router se pura app route-enabled ban jata hai
     <Router>
       {/* Navbar sabhi pages ke upar rahega */}
-      {<Navbar />}
+      {/* <Navbar /> */}
 
       <div className="content">
         <Routes>
@@ -32,12 +32,12 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          {/* Agar koi route match nahi hota, to Home page dikhayenge */}
+          {/* agar koi route match nahi hota, to Home page dikhayenge */}
           <Route path="*" element={<Home />} />
         </Routes>
       </div>
 
-      {/* Footer sabhi pages ke niche rahega */}
+      {/* footer sabhi pages ke niche rahega */}
       <Footer />
     </Router>
   );

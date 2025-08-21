@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../App.css";
 //Footer component banate hain
 const Footer = () => {
     return(

@@ -1,10 +1,15 @@
-import React from 'react'
+import React from 'react';
+
 const Section = () => {
   return (
-    <div>
-      <h1>Section Details</h1>
+    <>
+      <Navbar />
 
-    </div>
+      <div>
+        <h1>Section Details</h1>
+
+      </div>
+    </>
   );
 };
 

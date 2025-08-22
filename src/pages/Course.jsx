@@ -3,10 +3,11 @@ import Navbar from "../components/Navbar";
 const Course = () => {
   return (
     <>
-    <Navbar />
-    <div>
-      <h1>Our Courses</h1>
-    </div>
+      <Navbar />
+      <div>
+
+        <h1>Our Courses</h1>
+      </div>
     </>
   );
 };

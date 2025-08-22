@@ -1,14 +1,14 @@
 import React from 'react';
-import Navbar from "../components/Navbar";
+
 const Section = () => {
   return (
-  <>
-   <Navbar />
+    <>
+      <Navbar />
 
-    <div>
-      <h1>Section Details</h1>
+      <div>
+        <h1>Section Details</h1>
 
-    </div>
+      </div>
     </>
   );
 };

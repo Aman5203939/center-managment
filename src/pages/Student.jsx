@@ -1,32 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 
-const Home = () => {
-  const user = JSON.parse(localStorage.getItem("user"));
-  const role = user?.role || "student"; // Default role
-
-  // Stats (sirf admin ke liye)
-  const stats = [
-    { title: "Total Courses", value: 12 },
-    { title: "Total Sections", value: 25 },
-    { title: "Registered Students", value: 350 },
-  ];
-
-  // Notices (sabhi users ke liye)
+const Student = () => {
+  // Student specific data
   const notices = [
     { title: "Exam schedule released", type: "Important" },
     { title: "New course 'AI Basics' added", type: "Info" },
-    { title: "Section 3 rescheduled", type: "Update" },
   ];
 
-  // Recent activities (sirf admin ke liye)
-  const recentActivities = [
-    "Admin added new course 'Data Science Basics'",
-    "Section 2 timing updated by Staff A",
-    "Student registration completed: John Doe",
-  ];
-
-  // Upcoming exams
   const upcomingExamsList = [
     { course: "Mathematics", date: new Date("2025-08-22T09:00:00") },
     { course: "Computer Science", date: new Date("2025-08-22T14:30:00") },
@@ -46,7 +27,6 @@ const Home = () => {
     return `${d}d ${h}h ${m}m ${s}s`;
   };
 
-  // Live countdown update
   useEffect(() => {
     const interval = setInterval(() => {
       setExamCountdowns(
@@ -59,7 +39,6 @@ const Home = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Filter today's exams
   const today = new Date();
   const todayExams = examCountdowns.filter(
     (e) => e.date.toDateString() === today.toDateString()
@@ -69,23 +48,10 @@ const Home = () => {
     <>
       <Navbar />
       <div className="home-container">
-        {/* Welcome message */}
         <div className="welcome">
-          <h1>Welcome, {user?.name || "User"}</h1>
-          <p>Manage your exam center efficiently from here.</p>
+          <h1>Student Dashboard</h1>
+          <p>View your upcoming exams and notices</p>
         </div>
-
-        {/* Stats (Admin only) */}
-        {role === "admin" && (
-          <div className="stats-container">
-            {stats.map((s, i) => (
-              <div key={i} className="stat-card">
-                <h3>{s.title}</h3>
-                <p>{s.value}</p>
-              </div>
-            ))}
-          </div>
-        )}
 
         {/* Notices */}
         <div className="notices">
@@ -126,21 +92,9 @@ const Home = () => {
             <p>No exams today</p>
           )}
         </div>
-
-        {/* Recent Activities (Admin only) */}
-        {role === "admin" && (
-          <div className="recent-activities">
-            <h3>Recent Activities</h3>
-            <ul>
-              {recentActivities.map((a, i) => (
-                <li key={i}>{a}</li>
-              ))}
-            </ul>
-          </div>
-        )}
       </div>
     </>
   );
 };
 
-export default Home;
+export default Student;

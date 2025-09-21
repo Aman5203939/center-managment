@@ -32,16 +32,23 @@ function Login() {
     );
 
     if (validUser) {
-     localStorage.setItem("user", JSON.stringify({ username: loginData.username }));//yaha line logaout vale user ko localStorage me store kar rahe hain
+      // yahan par user ko store kar rahe hain
+      localStorage.setItem("user", JSON.stringify(validUser));
 
-      // role ke hisaab se navigate
+      // agar role system future me chahiye to ye uncomment kar lena
+      /*
       if (validUser.role === "admin") {
         navigate("/admin");
       } else {
         navigate("/student");
       }
-    } else {
-      (" ");
+      */
+
+      //abhi ke liye direct home page bhejna hai== tempray 
+      navigate("/home");
+      } else {
+    
+    alert("Invalid Username or Password!");
     } 
   };
 
@@ -51,33 +58,35 @@ function Login() {
         <h2>Login</h2>
         <form onSubmit={handleLogin}>
           {/* username input */}
-   <label>Username:</label><br />
-   <input
-   type="text"
-   name="username"
-  placeholder="Enter username"
-    value={loginData.username}
-    onChange={handleChange}
-     required
-  /><br />
+          <label>Username:</label><br />
+          <input
+            type="text"
+            name="username"
+            placeholder="Enter username"
+            value={loginData.username}
+            onChange={handleChange}
+            required
+          /><br />
 
-   {/* password input */}
-   <label>Password:</label><br />
-     <input
-     type="password"
-       name="password"
-    placeholder="Enter password"
-     value={loginData.password}
-     onChange={handleChange}
-    /><br />
+          {/* password input */}
+          <label>Password:</label><br />
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter password"
+            value={loginData.password}
+            onChange={handleChange}
+            required
+          /><br />
 
-    <button type="submit">Login</button>
-    {/*yaha ham login ke niche signup ka link de rahe he */} 
-    <p>
-        Not registered yet?{" "}
-        <Link to="/signup">Signup here</Link>
-      </p>  
-           </form>
+          <button type="submit">Login</button>
+
+          {/* signup ka link */}
+          <p>
+            Not registered yet?{" "}
+            <Link to="/signup">Signup here</Link>
+          </p>
+        </form>
       </div>
     </div>
   );
